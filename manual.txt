@@ -1,0 +1,52 @@
+This program executes gemini simple trades both in one-off manner and recurring format.
+Both revolve around a config file for input. Below are details to that config file.
+
+
+One-Off Trade:
+{
+  "type": "single"
+  "trade_pairs": [
+    {
+      "orig_currency": "USD"
+      "dest_currency": "BTC"
+      "volume": 25
+    },
+  ]
+}
+
+Recurring Trade Example:
+{
+  "type": "recurring",
+  "trade_date": [1, 15],
+  "trade_time": 0200
+  "trade_pairs": [
+    {
+      "orig_currency": "USD"
+      "dest_currency": "BTC"
+      "volume": 25
+    },
+    {
+      "orig_currency": "USD"
+      "dest_currency": "ETH"
+      "volume": 25
+    },
+  ]
+}
+
+type: single or recurring trade
+trade_date: set of dates we would like to trade on
+trade_time: the time we want to trade to the nearest minute in military time EST
+trade_pairs: details about specific trade
+    orig_currency: currency that you have
+    dest_currency: currency you are buying
+    volume: amount to trade in the originating currency
+
+Current program limits:
+* Market Orders Only.
+* No support of Gemini's client_order_id.
+* Only works with Gemini
+* There are minimal safeties for entering wrong information in the config.
+    - Please double check config before running to ensure desired result.
+
+
+

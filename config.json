@@ -1,0 +1,17 @@
+{
+  "type": "recurring",
+  "trade_date": [1, 14],
+  "trade_time": "0010",
+  "trade_pairs": [
+    {
+      "orig_currency": "usd",
+      "dest_currency": "btc",
+      "volume": 25
+    },
+    {
+      "orig_currency": "usd",
+      "dest_currency": "eth",
+      "volume": 25
+    }
+  ]
+}
